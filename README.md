@@ -35,3 +35,6 @@ dockerコンテナ起動
   ※権限がない場合はsudoをつける
 - rm -rf rails_typescript_example2/README.md
 - cp -pr rails_typescript_example2/* rails_typescript_example2/.gitignore rails_typescript_example2/.ruby-version rails_typescript_example2/.gitattributes .
+
+rails起動
+- docker-compose exec rails s
