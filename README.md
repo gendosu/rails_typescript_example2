@@ -26,6 +26,12 @@ dockerコンテナの設定
 dockerコンテナ起動
 - docker-compose up app
 
-別のコンソールでdockerコンテナに接続して作業
+別のコンソールでdockerコンテナに接続して作業  
+以下の作業内容  
+[rails new rails_typescript_example2 --database=postgresql --webpack=react](https://github.com/gendosu/rails_typescript_example2/commit/d0eb984a55d997209c5418e083d9a6b82b28dd9a)
 - docker-compose exec app bash  
 - docker-compose exec app bundle exec rails new rails_typescript_example2 --database=postgresql --webpack=react
+- rm -rf rails_typescript_example2/.git
+  ※権限がない場合はsudoをつける
+- rm -rf rails_typescript_example2/README.md
+- cp -pr rails_typescript_example2/* rails_typescript_example2/.gitignore rails_typescript_example2/.ruby-version rails_typescript_example2/.gitattributes .
