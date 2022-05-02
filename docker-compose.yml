@@ -8,3 +8,5 @@ services:
       - .:/app:cached
     entrypoint: ./entrypoint.sh
     command: bash
+    stdin_open: true
+    tty: true
