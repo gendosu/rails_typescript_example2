@@ -19,3 +19,13 @@ Gemfileの作成
 bundle install実行
 - docker-compose run --rm app bundle install  
   [bundle install](https://github.com/gendosu/rails_typescript_example2/commit/e93bf527673de370456088b8c46ab703f05365e3)
+
+dockerコンテナの設定
+- [docker-compose up時にアタッチ状態にするための設定追加](https://github.com/gendosu/rails_typescript_example2/commit/7c2230a40d397e2390c8858fbb2074881f33fb3a)
+
+dockerコンテナ起動
+- docker-compose up app
+
+別のコンソールでdockerコンテナに接続して作業
+- docker-compose exec app bash  
+- docker-compose exec app bundle exec rails new rails_typescript_example2 --database=postgresql --webpack=react
