@@ -1,12 +1,37 @@
 version: "3.7"
 
+volumes:
+  postgres:
+
 services:
   app:
     build: .
 
+    depends_on:
+      - db
+
     volumes:
       - .:/app:cached
+      - postgres:/var/run/postgresql
+
     entrypoint: ./entrypoint.sh
     command: bash
     stdin_open: true
     tty: true
+
+    ports:
+      - "3000:3000"
+
+  db:
+    image: postgres
+
+    environment:
+      - "POSTGRES_USER=root"
+      - "POSTGRES_HOST_AUTH_METHOD=trust"
+
+    volumes:
+      - postgres:/var/run/postgresql
+      - .:/app:cached
+
+    ports:
+      - "5432:5432"
