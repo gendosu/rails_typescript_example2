@@ -8,3 +8,5 @@ github登録前の手順
 - git remote add origin HEAD
 - git push -u origin HEAD
 
+Dockerfile関連のファイルを作成する
+- [add first docker files](https://github.com/gendosu/rails_typescript_example2/commit/582622184f4a918acccae71cb4cc83bd20d1aef7)
